@@ -1,4 +1,4 @@
-{% set version = '0.2' %}
+{% set version = '0.3' %}
 
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
@@ -12,18 +12,12 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/config_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/config/config_{{ version }}.tar.gz
-  sha256: 40cc2969cc655214817edc053c9649b9226f4b24368fccca9d2d338833560fdc
-
-
-  # patches:
-   # List any patch files here
-   # - fix.patch
+  sha256: 5ade6a768db6225634095ac0e71e5710fd1597c15512bac0b45a0b52afb3c750
 
 build:
   merge_build_host: True  # [win]
   # If this is a new build for the same version, increment the build number.
   number: 0
-
 
   # This is required to make R link correctly on Linux.
   rpaths:
@@ -73,7 +67,7 @@ extra:
 # Package: config
 # Type: Package
 # Title: Manage Environment Specific Configuration Values
-# Version: 0.2
+# Version: 0.3
 # Authors@R: c( person("JJ", "Allaire", role = c("aut", "cre"), email = "jj@rstudio.com"), person(family = "RStudio, Inc.", role = "cph"))
 # Imports: yaml (>= 2.1.13)
 # Suggests: testthat, knitr
@@ -81,14 +75,14 @@ extra:
 # License: GPL-3
 # URL: https://github.com/rstudio/config
 # BugReports: https://github.com/rstudio/config/issues
-# RoxygenNote: 5.0.1
+# RoxygenNote: 6.0.1
 # VignetteBuilder: knitr
 # NeedsCompilation: no
-# Packaged: 2016-08-02 13:24:09 UTC; jjallaire
+# Packaged: 2018-03-27 17:50:45 UTC; jjallaire
 # Author: JJ Allaire [aut, cre], RStudio, Inc. [cph]
 # Maintainer: JJ Allaire <jj@rstudio.com>
 # Repository: CRAN
-# Date/Publication: 2016-08-02 16:59:45
+# Date/Publication: 2018-03-27 20:38:53 UTC
 
 # See
 # http://docs.continuum.io/conda/build.html for
